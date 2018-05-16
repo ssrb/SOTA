@@ -1,0 +1,15 @@
+fsudo: required
+dist: trusty
+language: cpp
+compiler:
+- gcc
+script:
+- export VBCC=${HOME}/vbcc
+- mkdir -p ${VBCC}/bin
+- wget http://sun.hasenbraten.de/vasm/release/vasm.tar.gz
+- tar xzvf vasm.tar.gz
+- pushd vasm 
+- make CPU=m68k SYNTAX=mot
+- cp vasmm68k_mot vobjdump ${VBCC}/bin
+- popd
+- vasmm68k_mot -kick1hunks -Fhunkexe -o test -nosym ./RipFiles.s
