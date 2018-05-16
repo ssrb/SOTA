@@ -13,4 +13,4 @@ script:
 - cp vasmm68k_mot vobjdump ${VBCC}/bin
 - popd
 - export PATH=${VBCC}/bin:${PATH}
-- vasmm68k_mot -kick1hunks -Fhunkexe -o test -nosym ./RipFiles.s
+- vasmm68k_mot -kick1hunks -Fhunkexe -o RipFiles -nosym ./RipFiles.s
