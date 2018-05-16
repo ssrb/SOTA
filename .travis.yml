@@ -12,4 +12,5 @@ script:
 - make CPU=m68k SYNTAX=mot
 - cp vasmm68k_mot vobjdump ${VBCC}/bin
 - popd
+- export PATH=${VBCC}/bin:${PATH}
 - vasmm68k_mot -kick1hunks -Fhunkexe -o test -nosym ./RipFiles.s
