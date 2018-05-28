@@ -60,7 +60,9 @@ BuildName
 	dc.w	1
 
 ; first loader: 
-TAB	dc.w	2,3		; ext. mem
+TAB	
+	dc.w	0,2		; James Bond girls
+	dc.w	2,3		; ext. mem
 	dc.w	5,7		; $409dc, loader module
 	dc.w	12,6		; ext. +$3dfe
 	dc.w	18,3		; ext. +$20000, decrunched to $6cb10, 3bpl picture
